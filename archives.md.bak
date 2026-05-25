@@ -1,0 +1,39 @@
+
+<h1 id="档案"><a href="#/news?id=档案" data-id="档案" class="anchor"><span>档案</span></a></h1>
+
+<ul class="news"></ul>
+
+<script>
+	$(function () {
+		var li = '<li><span></span> | <a href="" target="_blank"></a>「<span></span>」</li>';
+		$.ajax({
+		    // url: '/docs/feed.xml',
+		    url: '/content/feed.php',
+		    dataType: 'xml',
+		    success: function(xml) {
+		    	var num = 0;
+		        $(xml).find('item').each(function() {
+		        	var liObj = $(li);
+		        	liObj.find('span:eq(0)').text( formatDate( $(this).find('pubDate').text() ) );
+		        	liObj.find('span:eq(1)').text($(this).find('category').text());
+		        	liObj.find('a').text($(this).find('title').text());
+		        	liObj.find('a').attr('href', $(this).find('link').text());
+		        	$('.news').append(liObj);
+		        	num++;
+		        	if (num >= 20) return false;
+		        });
+		    },
+		    error: function() {
+		        console.log('An error occurred while fetching the XML data.');
+		    }
+		});
+
+		function formatDate(dateString) {
+		    const date = new Date(dateString);
+		    const year = date.getFullYear();
+		    const month = String(date.getMonth() + 1).padStart(2, '0');
+		    const day = String(date.getDate()).padStart(2, '0');
+		    return `${year}-${month}-${day}`;
+		}
+	});
+</script>

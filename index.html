@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>迷雾调查部 - M.I.U</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="static/css/vue.css">
+  <script src="static/js/jquery.min.js"></script>
+  <style type="text/css">
+    .search {
+      display: none !important;
+    }
+    .app-name {
+      margin-top: 20px !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    function isMobileDevice() {
+      return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+    $(function () {
+      if (!isMobileDevice()) {
+        $('.sidebar-toggle').click();
+      }
+    });
+    window.$docsify = {
+      name: '<font color=white>〔迷雾调查部〕</font>',
+      //logo: 'static/img/miu.webp',
+      el: '#app',
+      repo: '',
+      maxLevel: 4,
+      subMaxLevel: 0,
+      coverpage: true,
+      themeColor: '#fff',
+      autoHeader: true,
+      onlyCover: false,
+
+      homepage: 'index.md',
+      executeScript: true,
+
+      // search: {
+      //   paths: 'auto',
+      //   placeholder: ' 🔍 开始搜索',
+      //   noData: '😞 没有结果',
+      //   depth: 6
+      // },
+      
+      loadSidebar: true,
+      loadNavbar: true,
+      mergeNavbar: true,
+      auto2top: true,
+      
+      pagination: {
+        previousText: '上一页',
+        nextText: '下一页',
+        crossChapter: true
+      },
+
+      plugins: [
+        function(hook) {
+          var footer = [
+            '<hr/>',
+            '<footer>',
+              '<P>本站由迷雾调查小组运营 - m1u.Top</p>',
+              '<p>Copyright © 2025 <B>M.I.U</B> All Rights Reserved.</p>',
+            '</footer>'
+          ].join('');
+
+          hook.afterEach(function(html) {
+            return html + footer;
+          });
+        }
+      ],
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="static/js/docsify.js"></script>
+  <script src="static/js/plugins/search.js"></script>
+</body>
+</html>
