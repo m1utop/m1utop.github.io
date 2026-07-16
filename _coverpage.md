@@ -5,9 +5,9 @@
 > Copyright © 2025 **M.I.U**
 
 
-[关于](about)
 [档案室](https://wiki.m1u.top/)
 [聊天室](https://kook.vip/nh7xin)
+[关于](about)
 
 <!-- 背景色 -->
 ![color](#222)
