@@ -2,7 +2,7 @@
 
 **<center><font color=white size=72><a href="#/about">〔 迷雾调查部 〕</a></font></center>**
 
-> Copyright © 2025 **M.I.U**
+> Copyright © 2026 **M.I.U**
 
 
 [档案室](https://wiki.m1u.top/)
