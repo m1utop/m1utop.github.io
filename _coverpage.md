@@ -6,7 +6,8 @@
 
 
 [关于](about)
-[档案](https://wiki.m1u.top/)
+[档案室](https://wiki.m1u.top/)
+[聊天室](https://kook.vip/nh7xin)
 
 <!-- 背景色 -->
 ![color](#222)
