@@ -5,7 +5,7 @@
 > Copyright © 2026 **M.I.U**
 
 
-[档案室](https://wiki.x.m1u.top/)
+[档案室](https://wiki.m1u.top/)
 [聊天室](https://kook.vip/nh7xin)
 [关于](about)
 
