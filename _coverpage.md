@@ -1,4 +1,4 @@
-<img src="static/img/miu_dark.webp" alt="MIU" width="500">
+<img src="static/img/miu_dark.webp" alt="MIU" width="370">
 
 **<center><font color=white size=72><a href="#/about">〔 迷雾调查部 〕</a></font></center>**
 
